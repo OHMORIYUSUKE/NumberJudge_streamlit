@@ -22,7 +22,7 @@ digits = datasets.load_digits()
 st.sidebar.subheader('教師データ')
 for i in range(10):
     plt.matshow(digits.images[i], cmap="Greys")
-    st.sidebar.pyplot()
+    st.sidebar.pyplot(use_column_width=True)
 
 
 uploaded_file = st.file_uploader("数字の画像をアップロードしてください。")
