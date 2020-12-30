@@ -41,8 +41,8 @@ def gazouWoSuutini(filename):
     #print(suuti.reshape(8, 8))
     suuti_2D = suuti.reshape(8, 8)
     plt.matshow(suuti_2D, cmap="Greys")
+    st.write('画像を8×8の数値データに変換')
     image_loc2.pyplot()
-    st.write('データを変換')
     
     return suuti
 
