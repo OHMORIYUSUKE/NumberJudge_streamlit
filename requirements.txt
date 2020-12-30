@@ -3,3 +3,4 @@ Pillow
 scikit-learn
 numpy
 Pillow
+matplotlib
