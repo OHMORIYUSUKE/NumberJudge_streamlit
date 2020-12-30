@@ -5,12 +5,24 @@ import PIL.Image
 import streamlit as st
 from PIL import Image
 from PIL import UnidentifiedImageError
+import matplotlib.pyplot as plt
+from sklearn import datasets
+from sklearn.metrics import classification_report
+
+st.set_option('deprecation.showPyplotGlobalUse', False)
 
 st.title('数字判定アプリ')
 
-st.sidebar.write('ダウンロードして使ってください。')
+st.sidebar.subheader('ダウンロードして使ってください。')
 for i in range(10):
     st.sidebar.image(f"{i}.png",use_column_width=True)
+
+digits = datasets.load_digits()
+
+st.sidebar.subheader('教師データ')
+for i in range(10):
+    plt.matshow(digits.images[i], cmap="Greys")
+    st.sidebar.pyplot()
 
 
 uploaded_file = st.file_uploader("数字の画像をアップロードしてください。")
