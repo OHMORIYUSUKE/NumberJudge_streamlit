@@ -11,7 +11,7 @@ from sklearn.metrics import classification_report
 
 st.set_option('deprecation.showPyplotGlobalUse', False)
 
-st.title('数字判定アプリ')
+st.title('数字識別アプリ')
 
 st.sidebar.subheader('ダウンロードして使ってください。')
 for i in range(10):
