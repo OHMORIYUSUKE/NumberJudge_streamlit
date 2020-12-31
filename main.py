@@ -13,6 +13,8 @@ st.set_option('deprecation.showPyplotGlobalUse', False)
 
 st.title('数字判定アプリ')
 
+uploaded_file = st.file_uploader("数字の画像をアップロードしてください。")
+
 st.sidebar.subheader('ダウンロードして使ってください。')
 for i in range(10):
     st.sidebar.image(f"{i}.png",use_column_width=True)
@@ -25,8 +27,6 @@ for i in range(10):
     plt.matshow(digits.images[i], cmap="Greys")
     st.sidebar.pyplot()
 
-
-uploaded_file = st.file_uploader("数字の画像をアップロードしてください。")
 
 image_loc = st.empty()
 image_loc2 = st.empty()
