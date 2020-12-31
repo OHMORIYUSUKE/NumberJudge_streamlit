@@ -30,6 +30,7 @@ uploaded_file = st.file_uploader("数字の画像をアップロードしてく�
 
 image_loc = st.empty()
 image_loc2 = st.empty()
+text_loc = st.empty()
 
 def gazouWoSuutini(filename):
     gazou = PIL.Image.open(filename).convert("L")
@@ -41,9 +42,9 @@ def gazouWoSuutini(filename):
     #print(suuti.reshape(8, 8))
     suuti_2D = suuti.reshape(8, 8)
     plt.matshow(suuti_2D, cmap="Greys")
-    st.write('画像を8×8の数値データに変換')
     image_loc2.pyplot()
-    
+    text_loc.write('データを8×8の数値データに変換')
+
     return suuti
 
 
